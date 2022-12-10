@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Solway:wght@800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+body {
+    background: #FFE15D;
+}
+
+.memoryGame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background: linear-gradient(to right, #3ab4b2, #fdd81d, #b9026b);
+    padding: 2rem 4rem;
+    border-radius: 1.2rem;
+}
+
+
+.btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border: 1px solid #000;
+    border-radius: 0.3rem;
+    background-color: #121;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 0.5rem;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.disableBtn {
+    background-color: #757575;
+}
+
+.controlContainer {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.starter {
+    font-size: 1.6rem;
+}
+
+.board {
+    display: grid;
+    position: relative;
+    justify-content: center;
+
+}
+
+.card {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+.card.active {
+    width: 80px;
+    height: 80px;
+}
+
+
+.frontSide,
+.backSide {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background: #282A3A;
+    transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    backface-visibility: hidden;
+}
+
+.backSide {
+    font-size: 5rem;
+    text-align: center;
+    line-height: 100px;
+    background: #FDF8E6;
+    transform: rotateY(180deg) rotateZ(90deg);
+    user-select: none;
+}
+
+.cardImg {
+    width: 120px;
+    height: 120px;
+}
+
+.card.flipped .frontSide {
+    transform: rotateY(180deg) rotateZ(90deg);
+}
+
+.card.flipped .backSide {
+    transform: rotateY(0) rotateZ(0);
+}
+
+.showWin {
+    position: absolute;
+    width: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: all 0.5s ease;
+    border-radius: 0.5rem;
+
+}
+
+.showWin>button {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+    margin-top: 2.4rem;
+}
+
+.showWinStyle {
+    background-color: #DC3535;
+    padding: 1rem 2rem;
+}
+
+.showWinText {
+    display: block;
+    line-height: 3.6rem;
+    font-size: 1.5rem;
+}
+
+.chooseLevel {
+    background-color: #DC3535;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 650px;
+    height: 45vh;
+    border-radius: 0.4rem;
+
+}
+
+.chooseLevelAnimation {
+    animation: vague 0.4s ease;
+
+}
+
+@keyframes vague {
+    0% {
+        top: 50%;
+        opacity: 1;
+    }
+
+    100% {
+        top: 40%;
+        opacity: 0;
+    }
+}
+
+.chooseLevel>ul {
+    position: absolute;
+    display: flex;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.chooseLevel>ul>li {
+    list-style: none;
+    margin: 2rem;
+}
+
+.pg1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.pg2 {
+    font-size: 1.8rem;
+    margin-top: 1.8rem;
+    text-align: center;
+    color: #fff;
+}
+
+.sepcialText {
+    font-family: 'Solway', serif;
+    font-size: 2.8rem;
+    color: #5837D0;
+}
+
+.levBtn {
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 1rem;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.2rem;
+    transition: all 0.3s ease;
+    background-color: #f1f1f1;
+}
+
+.levBtn:hover {
+    background: linear-gradient(to bottom, #3F3B6C, #9F73AB);
+    color: #fff;
+    text-decoration: underline;
+}
+
+.sepcialNum {
+    color: #38E54D;
+    font-size: 2rem;
+}
+
+.endText {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 1000px) {
+    .memoryGame {
+        padding: 1rem 1rem;
+        width: 480px;
+    }
+
+    .card {
+        width: 50px;
+        height: 80px;
+    }
+
+    .cardImg {
+        width: 50px;
+        height: 80px;
+    }
+
+    .btn {
+        width: 100px;
+        height: 60px;
+        padding: 0.5rem;
+    }
+
+    .starter {
+        font-size: 1.2rem;
+    }
+
+    .showWin {
+        width: 90%;
+    }
+
+    .chooseLevel {
+        height: 60vh;
+        width: 93%;
+    }
+
+    .chooseLevel>ul>li {
+        margin: 1rem;
+    }
+
+    .levBtn {
+        padding: 0.8rem;
+    }
+
+}
