@@ -239,7 +239,7 @@ body {
 @media screen and (max-width: 1000px) {
     .memoryGame {
         padding: 1rem 1rem;
-        width: 480px;
+        width: 360px;
     }
 
     .card {

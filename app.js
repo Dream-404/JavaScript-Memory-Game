@@ -100,13 +100,13 @@ function resizeWidth(x, cardElement, cardImgElement, adjust) {
       }
 
       if (adjust === "normal") {
-        eve.style.width = 90 + "px";
-        eve.style.height = 90 + "px";
+        eve.style.width = 73 + "px";
+        eve.style.height = 73 + "px";
       }
 
       if (adjust === "hard") {
-        eve.style.width = 50 + "px";
-        eve.style.height = 80 + "px";
+        eve.style.width = 34 + "px";
+        eve.style.height = 40 + "px";
       }
     });
 
@@ -117,13 +117,13 @@ function resizeWidth(x, cardElement, cardImgElement, adjust) {
       }
 
       if (adjust === "normal") {
-        eve.style.width = 90 + "px";
-        eve.style.height = 90 + "px";
+        eve.style.width = 73 + "px";
+        eve.style.height = 73 + "px";
       }
 
       if (adjust === "hard") {
-        eve.style.width = 50 + "px";
-        eve.style.height = 80 + "px";
+        eve.style.width = 34 + "px";
+        eve.style.height = 40 + "px";
       }
     });
   }
