@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>🧠 Memory Game</title>
+  </head>
+  <body>
+    <div class="chooseLevel">
+      <p class="pg1">
+        😀 <span class="sepcialText">L</span>et
+        <span class="sepcialText">P</span>lay
+        <span class="sepcialText">A</span>
+        <span class="sepcialText">M</span>emory
+        <span class="sepcialText">G</span>ame 😀
+      </p>
+      <p class="pg2">
+        <span class="sepcialText">C</span>hoose
+        <span class="sepcialText">L</span>evel
+        <span class="sepcialText">T</span>o
+        <span class="sepcialText">P</span>lay
+      </p>
+      <ul>
+        <li class="lev">
+          <button class="levBtn" id="easy">Easy</button>
+        </li>
+        <li class="lev">
+          <button class="levBtn" id="normal">Normal</button>
+        </li>
+        <li class="lev">
+          <button class="levBtn" id="hard">Hard</button>
+        </li>
+      </ul>
+    </div>
+    <div class="memoryGame">
+      <div class="controlContainer">
+        <button class="btn" id="btn">Play</button>
+        <div class="starter">
+          <div id="time">Time: 0 sec</div>
+          <div id="move">0 Move</div>
+        </div>
+      </div>
+
+      <div class="boardContainer">
+        <div class="board" data-dimension="4">
+          <div class="card">
+            <div class="frontSide"></div>
+            <div class="backSide"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="showWin"></div>
+
+    <div class="endText">
+      <p>Create with ❤️ by ArKar Min</p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
